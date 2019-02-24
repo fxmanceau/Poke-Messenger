@@ -61,7 +61,7 @@
             else if(in_array($section, $trainingData->pokeapiSections->researchWord->plural))
             {
                 // If the pokemon is me, echo a default response
-                if($dataPokemon === 'François-Xavier Manceau')
+                if($dataPokemon === 'françois-xavier manceau')
                 {
                     $response = 'Hey! I\'m not a Pokemon!';
                 }
