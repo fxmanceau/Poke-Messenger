@@ -1,0 +1,381 @@
+
+body{
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* Menu, parameters & friend's list CSS */
+.friends-list-container{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+    background: #ffffff;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.38, 0, 0.14, 0.99);
+}
+@media screen and (max-width: 850px)
+{
+    .friends-list-container{
+        position: absolute;
+        width: 100%;
+        transform: translateX(-100%);
+    }
+    .friends-list-container.is-active{
+        position: absolute;
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+.friends-list-container .list-header{
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.friends-list-container .list-header img.menu-arrow{
+    display: none;
+    width: 20px;
+    position: absolute;
+    right: 12px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+.friends-list-container.is-active .list-header img.menu-arrow{
+    display: block;
+}
+.friends-list-container .list-header img.settings{
+    display: block;
+    width: 20px;
+    position: absolute;
+    left: 12px;
+    cursor: pointer;
+}
+@media screen and (max-width: 850px)
+{
+    .friends-list-container .list-header img{
+        display: block;
+    }
+}
+.friends-list-container .list-header span{
+    display: block;
+    height: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1d2129;
+}
+
+/* Search-bar CSS */
+.friends-list-container .search-bar{
+    width: 94%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+}
+.friends-list-container .search-bar input#search-bar,
+.friends-list-container .search-bar .list-settings form input#settings{
+    width: 100%;
+    height: 30px;
+    background: #f5f6f7;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 12px;
+}
+.friends-list-container .search-bar input#search-bar::placeholder,
+.friends-list-container .search-bar .list-settings form input#settings::placeholder{
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Settings CSS */
+.friends-list-container .search-bar .list-settings{
+    width: calc(100% - 6px);
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    position: absolute;
+    top: -56px;
+    transform: translateY(0px);
+    padding: 12px 0;
+    transition: transform 0.5s cubic-bezier(0.38, 0, 0.14, 0.99);
+}
+.friends-list-container .search-bar .list-settings.is-active{
+    transform: translateY(56px);
+    transition: transform 0.5s cubic-bezier(0.38, 0, 0.14, 0.99);
+}
+.friends-list-container .search-bar .list-settings form{
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.friends-list-container .search-bar .list-settings form input#submit{
+    background: transparent;
+    border: none;
+    color: #c62828;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Friend list CSS */
+.friends-list-container .friends-list{
+    flex-grow: 1;
+    height: calc(100vh - 101px);
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+.friends-list-container .friends-list ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.friends-list-container .friends-list ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    cursor: pointer;
+}
+.friends-list-container .friends-list ul li:hover,
+.friends-list-container .friends-list ul li.is-active{
+    background: #f2f2f2;
+}
+.friends-list-container .friends-list ul li img{
+    height: 64px;
+}
+.friends-list-container .friends-list ul li img.error{
+    height: 40px;
+    padding: 12px;
+}
+.friends-list-container .friends-list ul li img.image-master{
+    height: 40px;
+    border-radius: 50%;
+    margin: 12px;
+}
+.friends-list-container .friends-list ul li .conversation-information{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+    height: 57%;
+}
+.friends-list-container .friends-list ul li .conversation-information .name{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+}
+.friends-list-container .friends-list ul li .conversation-information .message{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #999999;
+}
+
+
+
+/* Conversation container CSS */
+.conversation-container{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+@media screen and (max-width: 850px)
+{
+    .conversation-container{
+        width: 100%;
+    }
+}
+
+/* Conversation header CSS */
+.conversation-container .conversation-header{
+    width: 100%;
+    min-height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.conversation-container .conversation-header .pokemon-status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.conversation-container .conversation-header .pokemon-status .name{
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.conversation-container .conversation-header .pokemon-status .status{
+    font-size: 0.8rem;
+    color: #999999;
+}
+.conversation-container .conversation-header img{
+    display: none;
+    width: 20px;
+    position: absolute;
+    left: 12px;
+    cursor: pointer;
+}
+@media screen and (max-width: 850px)
+{
+    .conversation-container .conversation-header img{
+        display: block;
+    }
+}
+
+/* Messages container CSS */
+.conversation-container .conversation-messages-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 12px;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+.conversation-container .conversation-messages-container .conversation{
+    padding-bottom: 12px;
+}
+.conversation-container .conversation-messages-container .conversation span.start-conversation{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.8rem;
+    color: #999999;
+}
+
+/* Messages CSS */
+.conversation-container .conversation-messages-container .conversation .message{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-end;
+    margin-top: 15px;
+}
+@media screen and (max-width: 850px)
+{
+    .conversation-container .conversation-messages-container .conversation .message{
+        width: 70%;
+    }
+}
+.conversation-container .conversation-messages-container .conversation .message img{
+    width: 28px;
+    border-radius: 50%;
+    margin-right: 5px;
+    align-self: flex-end;
+}
+.conversation-container .conversation-messages-container .conversation .message span{
+    max-width: 100%;
+    font-size: 1rem;
+    background: #f2f2f2;
+    border-radius: 1rem;
+    padding: 6px 12px;
+    white-space: pre-line;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon span .dot{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c62828;
+    margin: 0.2rem;
+}
+
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon.loading span{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 1.3rem;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon.loading span .loading-dots{
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #bfbfbf;
+    border-radius: 50%;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon.loading span .loading-dots.loading-dot-0{
+    animation: animated-dots 1.2s ease-in-out infinite;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon.loading span .loading-dots.loading-dot-1{
+    animation: animated-dots 1.2s 0.2s ease-in-out infinite;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-pokemon.loading span .loading-dots.loading-dot-2{
+    animation: animated-dots 1.2s 0.4s ease-in-out infinite;
+}
+/* Wainting message Animation */
+@keyframes animated-dots{
+    0%{transform: translateY(0%)}
+    30%{transform: translateY(-50%)}
+    60%{transform: translateY(0%)}
+    100%{transform: translateY(0%)}
+}
+/* Messages of user */
+.conversation-container .conversation-messages-container .conversation .message.message-user{
+    margin-left: auto;
+    justify-content: flex-end;
+}
+.conversation-container .conversation-messages-container .conversation .message.message-user span{
+    background: #c62828;
+    color: #ffffff;
+    margin-right: 28px;
+}
+@media screen and (max-width: 850px)
+{
+    .conversation-container .conversation-messages-container .conversation .message.message-user span{
+        margin-right: 0px;
+    }
+}
+
+/* Conversation char bar CSS */
+.conversation-container .conversation-input-chat{
+    width: auto;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-end;
+    padding: 0 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+}
+.conversation-container .conversation-input-chat input{
+    width: 100%;
+    margin-right: 12px;
+    border: none;
+    outline: none;
+}
+.conversation-container .conversation-input-chat input::placeholder{
+    color: #ccccd6;
+}
+.conversation-container .conversation-input-chat img{
+    height: 28px;
+    cursor: pointer;
+}
