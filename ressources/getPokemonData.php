@@ -224,11 +224,22 @@
                 }
             }
 
-            // Else, if the data is an string with no url to curl, or a numeric
+            // Else, if the data is a string with no url to curl, or a numeric
             else if((is_string($dataToAnalyze->$fromSection) && !$dataPath->$fromSection->followUrl) || is_numeric($dataToAnalyze->$fromSection))
             {
-                // Build the final result directly with the template bot answer and remove - in the result
-                $finalResult = str_replace('-', ' ', $dataPath->$fromSection->responseTemplate . $dataToAnalyze->$fromSection);
+                // If a calcul is needed
+                if($dataPath->$fromSection->calcOption)
+                {
+                    // Build the final result based on the calcul directly with the template bot answer and remove - in the result
+                    $finalResult = str_replace('-', ' ', $dataPath->$fromSection->responseTemplate . ($dataToAnalyze->$fromSection)*($dataPath->$fromSection->calc) . $dataPath->$fromSection->calcOptionResponseTemplate);
+                }
+
+                // Or not needed
+                else
+                {
+                    // Build the final result directly with the template bot answer and remove - in the result
+                    $finalResult = str_replace('-', ' ', $dataPath->$fromSection->responseTemplate . $dataToAnalyze->$fromSection);
+                }
             }
 
             // Else, if the data is an object

@@ -78,6 +78,9 @@
             "target":"short_effect",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"Here are my abilities: "
@@ -90,6 +93,9 @@
             "target":"base_experience",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":null,
             "enable":true,
             "responseTemplate":"My base experience is "
@@ -102,6 +108,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"I can take this form: "
@@ -114,6 +123,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"I appear in these games: "
@@ -126,6 +138,9 @@
             "target":"height",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":true,
+            "calc":0.1,
+            "calcOptionResponseTemplate":"m",
             "array":null,
             "enable":true,
             "responseTemplate":"My height is "
@@ -138,6 +153,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"I can hold: "
@@ -150,6 +168,9 @@
             "target":"id",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":null,
             "enable":false,
             "responseTemplate":"My ID is "
@@ -162,6 +183,9 @@
             "target":"is_default",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":null,
             "enable":false,
             "responseTemplate":"I am a pokemon "
@@ -174,6 +198,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":null,
             "enable":true,
             "responseTemplate":"You can find me here: "
@@ -186,6 +213,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"Here are my possible moves: "
@@ -198,6 +228,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":null,
             "enable":true,
             "responseTemplate":"My name is "
@@ -210,6 +243,9 @@
             "target":"order",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":false,
             "enable":false,
             "responseTemplate":"My order is "
@@ -222,6 +258,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":false,
             "enable":true,
             "responseTemplate":"I come from the species of the "
@@ -234,6 +273,9 @@
             "target":"front_default",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":false,
             "enable":false,
             "responseTemplate":""
@@ -246,6 +288,9 @@
             "target":"name",
             "targetOption":["base_stat", "effort"],
             "targetOptionResponseTemplate":["Base Stat is ", "and Effort is: "],
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"Here are my stats for "
@@ -258,6 +303,9 @@
             "target":"name",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":null,
+            "calc":null,
+            "calcOptionResponseTemplate":null,
             "array":true,
             "enable":true,
             "responseTemplate":"My type is "
@@ -270,6 +318,9 @@
             "target":"weight",
             "targetOption":null,
             "targetOptionResponseTemplate":null,
+            "calcOption":true,
+            "calc":0.1,
+            "calcOptionResponseTemplate":"kg",
             "array":null,
             "enable":true,
             "responseTemplate":"My weight is "
