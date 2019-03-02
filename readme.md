@@ -24,7 +24,7 @@
 
 ## Install
 - Use a Web Server or MAMP/XAMP
-- Or see at [here](https://poke-messenger.francoisxaviermanceau.fr)
+- Or see [here](https://poke-messenger.francoisxaviermanceau.fr)
 
 
 ## Compatibility
