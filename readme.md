@@ -1,7 +1,7 @@
 # Poké Messenger
 > A custom Messenger based on PokéAPI with a bot answering questions about Pokemons, or just talking about life and jokes
 
-![Mockup Poké Messenger]:https://poke-messenger.francoisxaviermanceau.fr/images/mockup.gif
+![Mockup Poké Messenger](https://poke-messenger.francoisxaviermanceau.fr/images/mockup.gif)
 
 ## Features
 - User friendly interface (because it's the Facebook Messenger one)
